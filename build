@@ -5,5 +5,5 @@ for f in *.typ; do
         # rm $f # delete empty files
         continue # maybe it is just better to skip the file for compilation
     fi
-    typst compile $f pdfs/$f.pdf
+    typst compile $f pdfs/$(basename $f .typ).pdf
 done
